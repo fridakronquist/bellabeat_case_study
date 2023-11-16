@@ -4,9 +4,9 @@ author: "Frida Kronquist"
 date: "2023-11-16"
 output: 
   html_document:
+    theme: journal
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
 ```{r setup, include=FALSE}
@@ -19,7 +19,7 @@ library(kableExtra)
 source("tables/tbls.R")
 ```
 
-# Introduction¶
+# Introduction
 Bellabeat, is a high-tech company that manufactures health-focused smart products focusing on women. Collecting data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower women around the world with knowledge about their own health and habits.
 
 Bellabeat currently offers five products to their customers: Bellabeat membership, the Spring water bottle, the Time wellness watch, the Leaf classic wellness tracker, and the Bellabeat app. The Bellabeat app provides users with health data related to their activity, sleep, stress, menstrual cycle, and mindfulness habits. This data can help users better understand their current habits and make healthy decisions. The Bellabeat app connects to their line of smart wellness products. To advertise their products, Bellabeat focuses on digital marketing.
@@ -230,7 +230,7 @@ Initial thoughts regarding the dataset:
 - Mean very active minutes is 21 min (SD=33), mean fairly active minutes is 13 min (SD=20). This means on average users reach the recommended active minutes to gain significant health benefits. However, large standard deviation. Investigate further.
 - The activity minutes did not add up to 1440 min (60 min per hour, 24 hours in a day) on each row. Indicates that the users did not have their tracking devises on during the whole day. Investigate further.
 
-# 4.2. Lifestyle type based on daily steps
+## 4.2. Lifestyle type based on daily steps
 As there was no available demographic data, users were categorized into lifestyle types based on their daily steps. The levels are defined in the table below.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -326,7 +326,7 @@ ggplot(lifestyle_pct, aes(x=" ", y=round, fill=lifestyle_type)) +
 
 As the pie chart shows, all lifestyle types were represented in the tracker data. However, most users had a somewhat active (27%), low active (27%), or sedentary lifestyle (25%). Only 21% of the users were considered to have an active (15%) or very active (6%) lifestyle based on their total daily steps.
 
-# 4.3. Active minutes¶
+## 4.3. Active minutes¶
 The number of steps is not the only measure by which activity level is measured. According to Verywell Fit ([article here](https://www.verywellfit.com/why-active-minutes-mean-more-than-steps-4155747#toc-10000-steps-vs-30-active-minutes)), the number of active minutes mean even more than steps. They say the recommended activity level is minimum 150 min moderate-intensity exercise or 75 min vigorous-intensity exercise per week to reduce health risks such as heart disease, type 2 diabetes, etc. For potentially greater health benefits they recommend 300 min moderate-intensity exercise or 150 min vigorous-intensity exercise per week. Hence, it was investigated how many of the users that reached these levels of activity.
 
 It was assumed that moderate-intensity exercise corresponds to fairly active minutes in the dataset, and that vigorous-intensity exercise corresponds to very active minutes. Based on above recommendations, three levels of activity were created based on the health benefits they entail.
@@ -375,7 +375,7 @@ ggplot(mean_daily_activity, aes(x=activity_level, fill=lifestyle_type)) +
 
 Reaching the recommended active minutes per day to gain health benefits was achievable regardless of what lifestyle in terms of steps the user had. However, it seems like it is more likely to reach the recommended steps to gain high health benefits when having a somewhat active, active, or highly active lifestyle in terms of daily steps. Hence, encouraging sedentary and low active users to be more active during the day seems like a good idea. Emphasis spending more time being fairly active and very active rather that just increasing the steps. For example, rather a brisk walk than a slow one.
 
-# 4.4. Timing of steps¶
+## 4.4. Timing of steps¶
 Next the timing of the users' steps was analysed. First the timing based on weekday was analysed and then the timing based on time during the day.
 
 ```{r message=FALSE, warning=FALSE}
@@ -513,7 +513,7 @@ The more active of a user, the more the distribution deviated from a uniform dis
 
 In general, it seems like a good idea to promote more activity throughout the whole day. Maybe a little reminder in the app to have an activity break and move the body a bit. Encourage users to commute by foot or bike if they are able, to have a lunch time walk/work out, and to continue to move after work. I.e. to integrate movement into their everyday life.
 
-# 4.5. Tracker usage
+## 4.5. Tracker usage
 While observing the summary statistics, it was noticed that users do not keep their tracking devices on all the time. First, it was investigated how many days, out of the 31 days, the users utilized their fitness tracker.
 
 The users were categorized into four different groups based on their daily usage. The groups are shown in the table below.
@@ -677,7 +677,7 @@ ggplot(tracker_usage, aes(x=" ", y=n, fill=usage_minutes)) +
 
 As seen in the figure, the users use their fitness trackers a lot in terms of both days and minutes. Users who use their trackers daily are also likely to use them all day and night or most of the day and night. This indicates user engagement is high. However, to increase the usage of the fitness tracker even further, it might be a good idea to add a reminder in the app to wear the fitness tracker after longer times of inactivity.
 
-# 4.6. Reccomendations
+## 4.6. Reccomendations
 This section will present a summary of the high-level recommendations to be used in Bellabeat's marketing strategy.
 
 - Encourage sedentary and low active users to be more active during the day. Emphasis spending more time being fairly active and very active rather that just increasing the steps. For example, rather a brisk walk than a slow one.
@@ -686,5 +686,5 @@ This section will present a summary of the high-level recommendations to be used
 - Add a little reminder in app to use fitness tracker if there are long periods of inactivity.
 - Remake analysis with own data; Considering the demographics of the Fitbit users were unknown, it is unsure if the results of this analysis are applicable to Bellabeat. Also, the sample of the analysis is very small. Hence, it is recommended to use Bellabeat's own data to perform the same or a similar analysis.
 
-# 5. Act¶
+# 5. Act
 Now it is up to the Bellabeat marketing group to ACT!
