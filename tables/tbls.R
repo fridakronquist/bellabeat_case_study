@@ -82,3 +82,14 @@ user_days_tbl <- data.frame(
            "10 - 19",
            "20 - 30",
            "31"))
+
+
+use_min_tbl <- data.frame(
+  Usage_group = c("Less than half of the day",
+                  "More than half of the day",
+                  "Most of the day and night",
+                  "All day and night"),
+  Minutes_of_usage = c("0-479",
+                       "480-959",
+                       "960- 1439",
+                       "1440"))
