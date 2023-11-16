@@ -8,6 +8,7 @@ The aim of the project was to generate data-driven recommendations regarding the
 The report follows the six steps of the data analysis process: ask, prepare, process, analyze, share, and act.
 
 Please click on the link below to read my case study:
+
 https://fridakronquist.github.io/bellabeat_case_study/
 
 ### Disclaimer
