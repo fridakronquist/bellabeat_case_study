@@ -1,7 +1,7 @@
 ---
-title: "Bellabeat Case Study"
-author: "Frida Kronquist"
-date: "2023-11-16"
+# title: "Bellabeat Case Study"
+# author: "Frida Kronquist"
+# date: "2023-11-16"
 output: 
   html_document:
     theme: journal
@@ -18,6 +18,8 @@ knitr::opts_chunk$set(echo = TRUE)
 library(kableExtra)
 source("tables/tbls.R")
 ```
+
+![](figures/bellabeat_header.png)
 
 # Introduction
 Bellabeat, is a high-tech company that manufactures health-focused smart products focusing on women. Collecting data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower women around the world with knowledge about their own health and habits.
