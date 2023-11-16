@@ -2,6 +2,8 @@
 # title: "Bellabeat Case Study"
 # author: "Frida Kronquist"
 # date: "2023-11-16"
+email_address: fridakronquist@gmail.com
+github_repo: https://fridakronquist.github.io/bellabeat_case_study/
 output: 
   html_document:
     theme: journal
